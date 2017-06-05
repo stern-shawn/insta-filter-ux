@@ -24,7 +24,7 @@ class App extends Component {
       <div className={styles.frame}>
         {this.state.photo.length === 0
           ? <PhotoPicker styles={styles} setPhoto={this.setPhoto} />
-          : <img src={this.state.photo}/>
+          : <img src={this.state.photo} alt="Uploaded file" />
         }
       </div>
     </div>

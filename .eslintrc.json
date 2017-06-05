@@ -1,33 +1,17 @@
 {
-    "parser": "babel-eslint",
-    "extends": "airbnb-base",
-    "plugins": [
-        "babel",
-        "react",
-        "import"
-    ],
-    "ecmaFeatures": {
-        "jsx": true,
-        "modules": true
-    },
-    "env": {
-        "browser": true,
-        "node": true,
-        "es6": true
-    },
-    "rules": {
-        "strict": [
-            2,
-            "never"
-        ],
-        "quotes": [
-            2,
-            "single"
-        ],
-        "react/jsx-uses-react": 2,
-        "react/jsx-uses-vars": 2,
-        "react/react-in-jsx-scope": 2,
-        "import/no-unresolved": 0,
-        "import/extensions": 0
-    }
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "react/forbid-prop-types": 0
+  }
 }
