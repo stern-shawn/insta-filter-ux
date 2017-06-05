@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PhotoPicker = ({ setPhoto, styles }) => {
+import styles from './styles.scss';
+
+const PhotoPicker = ({ setPhoto }) => {
   let upload;
 
   // Helper func so that clicking the outer div will trigger native file dialog
@@ -45,7 +47,6 @@ const PhotoPicker = ({ setPhoto, styles }) => {
 
 PhotoPicker.propTypes = {
   setPhoto: PropTypes.func.isRequired,
-  styles: PropTypes.object.isRequired,
 };
 
 export default PhotoPicker;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import PhotoPicker from '../../components/PhotoPicker';
+import PhotoPicker from '../../components/PhotoPicker/';
 import styles from './styles.scss';
 
 class App extends Component {
