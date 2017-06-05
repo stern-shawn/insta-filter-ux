@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import FilterInterface from '../FilterInterface/';
 import PhotoPicker from '../../components/PhotoPicker/';
 import styles from './styles.scss';
 
@@ -20,11 +21,11 @@ class App extends Component {
   }
 
   render = () => (
-    <div className="container">
-      <div className={styles.frame}>
+    <div className="wrap vh-100 overflow-hidden">
+      <div className="phone relative bg-white w-100 h-100">
         {this.state.photo.length === 0
-          ? <PhotoPicker styles={styles} setPhoto={this.setPhoto} />
-          : <img src={this.state.photo} alt="Uploaded file" />
+          ? <PhotoPicker setPhoto={this.setPhoto} />
+          : <FilterInterface photo={this.state.photo} />
         }
       </div>
     </div>

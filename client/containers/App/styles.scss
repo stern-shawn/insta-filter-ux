@@ -2,3 +2,9 @@
   height: 100vh;
   display: flex;
 }
+
+body {
+ -webkit-font-smoothing: antialiased;
+ background: #eee;
+ font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif;
+}

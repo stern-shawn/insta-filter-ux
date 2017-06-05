@@ -30,8 +30,8 @@ const PhotoPicker = ({ setPhoto }) => {
   };
 
   return (
-    <button
-      className={`${styles.emptyState} content has-text-centered`}
+    <div
+      className={`${styles.emptyState} absolute tc top-1 left-1 right-1 bottom-1 flex items-center justify-center pa3 ba`}
       onClick={triggerPhotoPicker}
     >
       <input
@@ -41,7 +41,7 @@ const PhotoPicker = ({ setPhoto }) => {
         ref={(el) => { upload = el; }}
       />
       <h2>Click to upload a photo</h2>
-    </button>
+    </div>
   );
 };
 
