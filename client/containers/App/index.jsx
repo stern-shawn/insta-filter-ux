@@ -25,7 +25,7 @@ class App extends Component {
       <div className="phone relative bg-white w-100 h-100">
         {this.state.photo.length === 0
           ? <PhotoPicker setPhoto={this.setPhoto} />
-          : <FilterInterface photo={this.state.photo} />
+          : <FilterInterface photo={this.state.photo} setPhoto={this.setPhoto} />
         }
       </div>
     </div>

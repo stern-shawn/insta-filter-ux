@@ -52,7 +52,7 @@ class FilterInterface extends Component {
 
   render = () => (
     <main className="flex flex-column h-100">
-      <FilterHeader />
+      <FilterHeader setPhoto={this.props.setPhoto} />
       <PhotoPreview
         filter={this.state.filters[this.state.selectedFilter]}
         photo={this.props.photo}
@@ -69,6 +69,7 @@ class FilterInterface extends Component {
 
 FilterInterface.propTypes = {
   photo: PropTypes.string.isRequired,
+  setPhoto: PropTypes.func.isRequired,
 };
 
 export default FilterInterface;
