@@ -54,9 +54,8 @@ class FilterInterface extends Component {
     <main className="flex flex-column h-100">
       <FilterHeader />
       <PhotoPreview
-        filters={this.state.filters}
+        filter={this.state.filters[this.state.selectedFilter]}
         photo={this.props.photo}
-        selectedFilter={this.state.selectedFilter}
       />
       <FilterList
         filters={this.state.filters}

@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PhotoPreview = ({ filters, photo, selectedFilter }) => (
+const PhotoPreview = ({ filter, photo }) => (
   <div
-    className={`${filters[selectedFilter].className} bg-center cover flex-auto`}
+    className={`${filter.className} bg-center cover flex-auto`}
     style={{ backgroundImage: `url(${photo})` }}
   />
 );
 
 PhotoPreview.propTypes = {
-  filters: PropTypes.array.isRequired,
+  filter: PropTypes.object.isRequired,
   photo: PropTypes.string.isRequired,
-  selectedFilter: PropTypes.number.isRequired,
 };
 
 export default PhotoPreview;
