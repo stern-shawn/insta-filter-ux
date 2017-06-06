@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import FilterHeader from '../../components/FilterHeader';
 import PhotoPreview from '../../components/PhotoPreview';
-import FilterList from '../../components/FilterList';
+import FilterList from '../FilterList';
 
 class FilterInterface extends Component {
   constructor(props) {
