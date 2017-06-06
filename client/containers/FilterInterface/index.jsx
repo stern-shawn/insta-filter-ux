@@ -44,15 +44,22 @@ class FilterInterface extends Component {
     { displayName: 'X-pro II', className: 'xpro2', strength: 100 },
   ];
 
+  // Enable the filter at the given index
   selectFilter = (index) => {
     this.setState({
       selectedFilter: index,
     });
   }
 
+  // Reset the app 'state' to no photo and the default filter
+  resetPhoto = () => {
+    this.props.setPhoto('');
+    this.selectFilter(0);
+  };
+
   render = () => (
     <main className="flex flex-column h-100">
-      <FilterHeader setPhoto={this.props.setPhoto} />
+      <FilterHeader resetPhoto={this.resetPhoto} />
       <PhotoPreview
         filter={this.state.filters[this.state.selectedFilter]}
         photo={this.props.photo}

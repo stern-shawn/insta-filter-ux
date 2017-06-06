@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import styles from './styles.scss';
 
-const FilterHeader = ({ setPhoto }) => (
+const FilterHeader = ({ resetPhoto }) => (
   <div className={`${styles.filterHeader} flex items-center relative overflow-hidden`}>
     <div className="w-third">
-      <button className="mr1 black-60 bg-transparent bn pv0 flex items-center" onClick={() => setPhoto('')} >
+      <button className="mr1 black-60 bg-transparent bn pv0 flex items-center" onClick={resetPhoto} >
         <i className="material-icons">keyboard_arrow_left</i>
       </button>
     </div>
@@ -20,7 +20,7 @@ const FilterHeader = ({ setPhoto }) => (
 );
 
 FilterHeader.propTypes = {
-  setPhoto: PropTypes.func.isRequired,
+  resetPhoto: PropTypes.func.isRequired,
 };
 
 export default FilterHeader;
