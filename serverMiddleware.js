@@ -23,6 +23,7 @@ const addDevMiddleware = (app) => {
 const addProdMiddleware = (app) => {
   // express.static middleware is used to serve static files (ie. bundle.js)
   app.use(express.static(path.join(__dirname, 'dist')));
+  app.use(express.static(path.join(__dirname, 'static')));
 };
 
 module.exports = (app) => {

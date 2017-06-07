@@ -12,7 +12,7 @@ class FilterList extends Component {
     };
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     // Initialize Flickity on mount and save a reference to it
     const flickityInstance = new Flickity(this.filterList, {
       cellAlign: 'center',
@@ -30,6 +30,12 @@ class FilterList extends Component {
 
   // When we select a filter, enable it and tell Flickity to scroll to that filter
   setFilter = (index) => {
+    // If the user is clicking the currently selected filter, count as a double-click to set
+    // filter strength!
+    if (index === this.props.selectedFilter) {
+      this.props.showFilterStrength();
+    }
+
     this.props.selectFilter(index);
     this.state.flickity.select(index);
   }
@@ -74,6 +80,7 @@ FilterList.propTypes = {
   photo: PropTypes.string.isRequired,
   selectFilter: PropTypes.func.isRequired,
   selectedFilter: PropTypes.number.isRequired,
+  showFilterStrength: PropTypes.func.isRequired,
 };
 
 export default FilterList;
